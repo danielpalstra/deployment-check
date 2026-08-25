@@ -43,11 +43,11 @@ jobs:
 
       - name: Set image tag
         run: |
-          IMAGE_REPO="docker.io/kuberhealthy/deployment-check"
+          IMAGE_REPO="docker.io/danielpalstra/deployment-check"
           IMAGE_TAG="${IMAGE_REPO}:${GITHUB_REF_NAME}"
-          GHCR_IMAGE_REPO="ghcr.io/kuberhealthy/deployment-check"
+          GHCR_IMAGE_REPO="ghcr.io/danielpalstra/deployment-check"
           GHCR_IMAGE_TAG="${GHCR_IMAGE_REPO}:${GITHUB_REF_NAME}"
-          PACKAGE_URL="https://github.com/orgs/kuberhealthy/packages/container/package/deployment-check"
+          PACKAGE_URL="https://github.com/users/danielpalstra/packages/container/package/deployment-check"
           echo "IMAGE_REPO=${IMAGE_REPO}" >> "$GITHUB_ENV"
           echo "IMAGE_TAG=${IMAGE_TAG}" >> "$GITHUB_ENV"
           echo "GHCR_IMAGE_REPO=${GHCR_IMAGE_REPO}" >> "$GITHUB_ENV"
